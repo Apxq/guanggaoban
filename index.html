@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="dist/css/swiper.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        ~ function () {
+            function computed() {
+                var pcWidth = document.documentElement.clientWidth
+                var des = 750;
+                if (pcWidth > 750) {
+                    document.documentElement.style.fontSize = "100px";
+                    return;
+                }
+                document.documentElement.style.fontSize = pcWidth / des * 100 + "px";
+            }
+            computed()
+
+        }();
+</script>
+    <!-- 重置样式表 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- swiper插件中的swiper.min.css -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <!-- 这个是自己要写的css -->
+    <link rel="stylesheet" href="css/index.css">
+    
+</head>
+    <style>
+        
+    </style>
+<body>
+        <script src="dist/js/swiper.min.js"></script>
+        <div class="swiper-container">
+          <div class="swiper-slide" id="page1">
+            <!-- 第一页的内容 -->
+            <img class="desk" src="img/desk.png" alt="">
+            <img class="zhi" src="img/zhi.png" alt="">
+            <img class="shiqu" src="img/shiqu.png" alt="">
+            <img class="qingchun" src="img/qingchun.png" alt="">
+            <img class="peoples" src="img/peoples.png" alt="">
+        </div>
+        <div class="swiper-slide" id="page2">
+            <!-- 第二页 -->
+        </div>
+        <div class="swiper-slide" id="page3">
+            <!-- 第三页 -->
+                </div>
+                
+                
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                
+               
+            </div>
+</body>
+</html>
+<!-- 第一步：连接swiper中的js -->
+<script src="js/swiper.min.js"></script>
+<script>
+  // 第三步骤：初始化swiper 插件
+ window.onload=function(){
+    var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'vertical', // 垂直切换选项
+    loop: true, // 循环模式选项
+    autoplay:true, //自动播放
+    
+    
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+    
+  })        
+ }
+</script>
